@@ -42,7 +42,7 @@ void writeOutput(char *filename, float result[INPUTSIZE-1]) {
 	}
 }
 
-float newton_raphson_method(float value, replicated_value, float allowed_error, float replicated_allowed_error) {
+float newton_raphson_method(float value, float replicated_value, float allowed_error, float replicated_allowed_error) {
   float m = function(value) / derived_function(value);
   if(allowed_error != replicated_allowed_error) {
 	  allowed_error = replicated_allowed_error;
