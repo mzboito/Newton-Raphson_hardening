@@ -101,6 +101,8 @@ int main(int argc, char *argv[]) {
 
 	if(memcmp(s_args1.result,s_args2.result,INPUTSIZE) != 0) {
 		fprintf(stderr,"[NEWTON] SDC DETECTED\n");
+	}  else {
+		fprintf(stderr,"[NEWTON] PASSED\n");
 	}
 
 
