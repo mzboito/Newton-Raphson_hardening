@@ -7,14 +7,14 @@ destDir = /tmp/newton
 all: gen_bin gen_data mv_bin
 
 gen_bin: newton.c
-	$(CC) $(CC_FLAGS) newton.c -o newton1
+	$(CC) $(CC_FLAGS) newton.c -o baseline
 
 gen_data: gen_bin
-	./newton1 ../inputs/input_500k.txt ../inputs/gold_500k.txt
+	./baseline ../inputs/input_500k.txt ../inputs/gold_500k.txt 
 
 mv_bin: gen_data
 	mkdir -p $(destDir)
-	mv newton1 $(destDir)
+	mv baseline $(destDir)
 	cp ../inputs/input_500k.txt ../inputs/gold_500k.txt $(destDir)
 	@echo "All Done, executables should be in the $(destDir)"
 
