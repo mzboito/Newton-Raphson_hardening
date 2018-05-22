@@ -1,0 +1,38 @@
+bitflips:;26649
+SDCs:;2128
+Crashes:;299
+Simultaneous SDCs and Crashes:;0
+
+FaultModels SDCs:
+FaultModel ;#SDCs; percentage
+LSB bit-flip;2128;100.0
+
+FaultModels Crashes:
+FaultModel ;#Crashes; percentage
+LSB bit-flip;299;14.050751879699247
+
+Variables that caused SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+98.5625;1600;1577;id2;newton.c;84
+18.92059553349876;1612;305;s_args2;newton.c;85
+14.09090909090909;1540;217;s_args1;newton.c;85
+3.896103896103896;385;15;_rtld_local;rtld.c;162
+3.763440860215054;372;14;_rtld_global;rtld.c;140
+
+Variables that caused Crash:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+4.466501240694789;1612;72;s_args2;newton.c;85
+4.48051948051948;1540;69;s_args1;newton.c;85
+9.898477157360407;394;39;_dl_skip_args;rtld.c;84
+8.951406649616368;391;35;user_entry;../elf/dl-sysdep.c;89
+0.2809383340356792;7119;20;_buffer;pthread_join.c;62
+3.3766233766233764;385;13;_rtld_local;rtld.c;162
+2.506265664160401;399;10;__GI__dl_argv;rtld.c;83
+2.2004889975550124;409;9;_dl_argv;rtld.c;86
+0.5134788189987163;1558;8;id1;newton.c;84
+0.375;1600;6;id2;newton.c;84
+1.3440860215053763;372;5;_rtld_global;rtld.c;140
+0.2976190476190476;1680;5;argv;newton.c;79
+0.9685230024213075;413;4;_rtld_global_ro;rtld.c;168
+0.17482517482517482;1716;3;argc;newton.c;79
+0.2564102564102564;390;1;_rtld_local_ro;rtld.c;202
