@@ -20,7 +20,7 @@ float derived_function (float value) {
 	return (3 * value * value - 2 * value);
 }
 
-void readInput(char *filename, float vector[INPUTSIZE]) {
+void read_input(char *filename, float vector[INPUTSIZE]) {
 	FILE *f_input;
 	int index = 0;
 
@@ -35,7 +35,7 @@ void readInput(char *filename, float vector[INPUTSIZE]) {
 	}
 }
 
-void writeOutput(char *filename, float result[INPUTSIZE-1]) {
+void write_output(char *filename, float result[INPUTSIZE-1]) {
 	FILE *f_output;
 	int index = 0;
 
@@ -61,7 +61,7 @@ float newton_raphson_method(float value, float allowed_error) {
   return value;
 }
 
-void interface(ARGS *s_args) {
+void *interface(ARGS *s_args) {
 	//duplicate everything
 	float vector[INPUTSIZE], allowed_error; //, result[INPUTSIZE-1];
 	readInput(s_args->input , vector);
@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
 
 	pthread_create(&id1, NULL, interface, &s_args1);
 	pthread_create(&id2, NULL, interface, &s_args2);
-    	pthread_join(id1, NULL);
+    pthread_join(id1, NULL);
 	pthread_join(id2, NULL);
 
 	if(memcmp(s_args1.result,s_args2.result,INPUTSIZE) != 0) {
