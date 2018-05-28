@@ -1,16 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <pthread.h>
 
 #define INPUTSIZE 500001
-
-typedef struct arg_struct {
-	char *input;
-	char *output;
-	float *result;
-
-} ARGS;
 
 float function(float value) {
 	return (value * value * value - value * value + 2);
@@ -61,50 +53,24 @@ float newton_raphson_method(float value, float allowed_error) {
   return value;
 }
 
-void *interface(ARGS *s_args) {
-	//duplicate everything
-	float vector[INPUTSIZE], allowed_error; //, result[INPUTSIZE-1];
-	readInput(s_args->input , vector);
-	int index;
-	float value;
-	allowed_error = vector[INPUTSIZE-1];
-	for(index=0; index<INPUTSIZE-1; index++){
-		float value = vector[index];
-		s_args->result[index] = newton_raphson_method(value, allowed_error);
-	}
-	writeOutput(s_args->output , s_args->result);
-
-}
-
 int main(int argc, char *argv[]) {
-	if (argc < 3) {
+	if (argc != 3) {
 		printf("\nERROR\n\nUsage: \n newton <inputFile>.txt <outputFile>.txt\n\n\n");
 		exit(1);
 	}
-	pthread_t id1, id2;
-	ARGS s_args1, s_args2;
-	//float v1[INPUTSIZE], v2[INPUTSIZE];
+	float vector[INPUTSIZE], allowed_error, result[INPUTSIZE-1];
 
-	s_args1.input = argv[1];
-	s_args1.output = argv[2];
-	s_args1.result = (float *)malloc(sizeof(float)*INPUTSIZE);
+	readInput(argv[1] , vector);
 
-	s_args2.input = argv[1];
-	s_args2.output = argv[2];
-	s_args2.result = (float *)malloc(sizeof(float)*INPUTSIZE);
-
-
-	pthread_create(&id1, NULL, interface, &s_args1);
-	pthread_create(&id2, NULL, interface, &s_args2);
-    pthread_join(id1, NULL);
-	pthread_join(id2, NULL);
-
-	if(memcmp(s_args1.result,s_args2.result,INPUTSIZE) != 0) {
-		fprintf(stderr,"[NEWTON] SDC DETECTED\n");
-	}  else {
-		fprintf(stderr,"[NEWTON] PASSED\n");
+	int i;
+	float value;
+	allowed_error = vector[INPUTSIZE-1];
+	for(i=0; i<INPUTSIZE-1; i++){
+		float value = vector[i];
+		result[i] = newton_raphson_method(value, allowed_error);
 	}
 
+	writeOutput(argv[2], result);
 
 	return 0;
 }
