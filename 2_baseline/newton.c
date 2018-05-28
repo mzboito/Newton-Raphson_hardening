@@ -64,15 +64,15 @@ float newton_raphson_method(float value, float allowed_error) {
 void *interface(ARGS *s_args) {
 	//duplicate everything
 	float vector[INPUTSIZE], allowed_error; //, result[INPUTSIZE-1];
-	readInput(s_args->input , vector);
+	read_input(s_args->input , vector);
 	int index;
 	float value;
 	allowed_error = vector[INPUTSIZE-1];
-	for(index=0; index<INPUTSIZE-1; index++){
+	for(index=0; index<INPUTSIZE-1; index++) {
 		float value = vector[index];
 		s_args->result[index] = newton_raphson_method(value, allowed_error);
 	}
-	writeOutput(s_args->output , s_args->result);
+	write_output(s_args->output , s_args->result);
 
 }
 
