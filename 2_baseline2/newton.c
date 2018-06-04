@@ -92,14 +92,14 @@ int main(int argc, char *argv[]) {
 	
 
 
-	pthread_create(&id1, NULL, interface, &s_args1);
+	pthread_create(&id1, NULL, (void *) interface, &s_args1);
     pthread_join(id1, NULL);
 
 	s_args2.input = argv[1];
 	s_args2.output = argv[2];
 	s_args2.result = (float *)malloc(sizeof(float)*INPUTSIZE);
 
-	pthread_create(&id2, NULL, interface, &s_args2);
+	pthread_create(&id2, NULL, (void *) interface, &s_args2);
 	pthread_join(id2, NULL);
 
 	if(memcmp(s_args1.result,s_args2.result,INPUTSIZE) != 0) {

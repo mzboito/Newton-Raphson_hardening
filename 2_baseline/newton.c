@@ -94,8 +94,8 @@ int main(int argc, char *argv[]) {
 	s_args2.result = (float *)malloc(sizeof(float)*INPUTSIZE);
 
 
-	pthread_create(&id1, NULL, interface, &s_args1);
-	pthread_create(&id2, NULL, interface, &s_args2);
+	pthread_create(&id1, NULL, (void *) interface, &s_args1);
+	pthread_create(&id2, NULL, (void *) interface, &s_args2);
     pthread_join(id1, NULL);
 	pthread_join(id2, NULL);
 
