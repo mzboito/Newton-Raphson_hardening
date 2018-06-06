@@ -12,7 +12,7 @@ float derived_function (float value) {
 	return (3 * value * value - 2 * value);
 }
 
-void readInput(char *filename, float vector[INPUTSIZE]) {
+void read_input(char *filename, float *vector) {
 	FILE *f_input;
 	int index = 0;
 
@@ -27,7 +27,7 @@ void readInput(char *filename, float vector[INPUTSIZE]) {
 	}
 }
 
-void writeOutput(char *filename, float result[INPUTSIZE-1]) {
+void write_output(char *filename, float *result) {
 	FILE *f_output;
 	int index = 0;
 
