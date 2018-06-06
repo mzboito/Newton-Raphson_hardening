@@ -10,7 +10,7 @@ gen_bin: newton.c
 	$(CC) $(CC_FLAGS) newton.c -o baseline
 
 gen_data: gen_bin
-	./baseline ../inputs/input_500k.txt ../inputs/gold_500k.txt 
+	./baseline ../inputs/input_500k.txt ../inputs/gold_500k.txt /tmp/newton-fulldup-threads-detection.log
 
 mv_bin: gen_data
 	mkdir -p $(destDir)
