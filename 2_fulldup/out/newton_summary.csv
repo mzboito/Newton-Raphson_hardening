@@ -1,0 +1,82 @@
+bitflips:;23764
+Total SDCs:;3738
+Detected SDCs:;1939
+Crashes:;1024
+Simultaneous SDCs and Crashes:;0
+
+FaultModels Undetected SDCs:
+FaultModel ;#SDCs; percentage
+LSB bit-flip;1799;48.12734082397004
+
+FaultModels Detected SDCs:
+FaultModel ;#SDCs Detected; percentage
+LSB bit-flip;1939;51.87265917602997
+
+FaultModels Crashes:
+FaultModel ;#Crashes; percentage
+LSB bit-flip;1024;27.39432851792402
+
+Variables that caused Undetected SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+46.068875893437294;1539;709;value;newton.c;45
+32.64291632145816;1207;394;i;newton.c;58
+29.34232715008432;1186;348;value;newton.c;7
+6.138107416879795;1564;96;allowed_error;newton.c;45
+4.510800508259212;1574;71;m;newton.c;46
+4.930795847750865;1156;57;allowed_error;newton.c;60
+13.698630136986301;219;30;value;newton.c;11
+100.0;23;23;index;newton.c;32
+50.0;32;16;result;newton.c;30
+56.00000000000001;25;14;f_output;newton.c;31
+3.594771241830065;306;11;_rtld_local;rtld.c;162
+3.2679738562091507;306;10;_rtld_global;rtld.c;140
+14.925373134328357;67;10;exponent;strtod_l.c;484
+33.33333333333333;12;4;nptr;strtod_l.c;479
+0.37974683544303794;790;3;value;newton.c;62
+33.33333333333333;6;2;last_digit_odd;../include/rounding-mode.h;43
+1.8518518518518516;54;1;num;strtod_l.c;483
+
+Variables that caused Detected SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+29.9545159194282;1539;461;value;newton.c;45
+35.678391959798994;1194;426;result;newton.c;56
+19.63545981772991;1207;237;i;newton.c;58
+19.477234401349072;1186;231;value;newton.c;7
+50.21834061135371;458;230;vector;newton.c;15
+15.235690235690235;1188;181;vector;newton.c;56
+4.411764705882353;1564;69;allowed_error;newton.c;45
+3.2871972318339098;1156;38;allowed_error;newton.c;60
+2.0330368487928845;1574;32;m;newton.c;46
+11.415525114155251;219;25;value;newton.c;11
+66.66666666666666;6;4;last_digit_odd;../include/rounding-mode.h;43
+2.9850746268656714;67;2;exponent;strtod_l.c;484
+0.25316455696202533;790;2;value;newton.c;62
+0.2638522427440633;379;1;f_input;newton.c;16
+
+Variables that caused Crash:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+11.70076726342711;1564;183;allowed_error;newton.c;45
+8.877721943048575;1194;106;result;newton.c;56
+18.96551724137931;522;99;index;newton.c;17
+8.217993079584774;1156;95;allowed_error;newton.c;60
+7.744107744107744;1188;92;vector;newton.c;56
+21.108179419525065;379;80;f_input;newton.c;16
+5.538221528861154;1282;71;path;newton.c;56
+22.818791946308725;298;68;user_entry;../elf/dl-sysdep.c;89
+19.558359621451103;317;62;_dl_skip_args;rtld.c;84
+7.575757575757576;462;35;filename;newton.c;15
+5.458515283842795;458;25;vector;newton.c;15
+2.071251035625518;1207;25;i;newton.c;58
+5.555555555555555;324;18;__GI__dl_argv;rtld.c;83
+22.388059701492537;67;15;exponent;strtod_l.c;484
+51.85185185185185;27;14;exponent;strtod_l.c;339
+3.0959752321981426;323;10;_dl_argv;rtld.c;86
+2.380952380952381;336;8;_rtld_local_ro;rtld.c;202
+1.3071895424836601;306;4;_rtld_global;rtld.c;140
+5.970149253731343;67;4;numsize;strtod_l.c;483
+0.8875739644970414;338;3;_rtld_global_ro;rtld.c;168
+50.0;4;2;list_all_lock;genops.c;38
+0.6535947712418301;306;2;_rtld_local;rtld.c;162
+7.142857142857142;14;1;loc;strtod_l.c;480
+100.0;1;1;symbolp;dl-addr.c;125
+3.3333333333333335;30;1;endptr;strtod_l.c;479

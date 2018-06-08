@@ -1,0 +1,92 @@
+bitflips:;26992
+Total SDCs:;4399
+Detected SDCs:;1562
+Crashes:;907
+Simultaneous SDCs and Crashes:;0
+
+FaultModels Undetected SDCs:
+FaultModel ;#SDCs; percentage
+LSB bit-flip;2837;64.49192998408729
+
+FaultModels Detected SDCs:
+FaultModel ;#SDCs Detected; percentage
+LSB bit-flip;1562;35.50807001591271
+
+FaultModels Crashes:
+FaultModel ;#Crashes; percentage
+LSB bit-flip;907;20.618322345987725
+
+Variables that caused Undetected SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+99.64622641509435;848;845;index;newton.c;33
+66.4850136239782;734;488;f_output;newton.c;32
+37.823371989295275;1121;424;value;newton.c;46
+47.53309265944645;831;395;result;newton.c;31
+25.026511134676564;943;236;i;newton.c;59
+24.242424242424242;957;232;value;newton.c;8
+3.9861351819757362;1154;46;allowed_error;newton.c;46
+4.129263913824058;1114;46;m;newton.c;47
+3.923647932131495;943;37;allowed_error;newton.c;61
+14.594594594594595;185;27;value;newton.c;12
+4.308390022675737;441;19;_rtld_local;rtld.c;162
+4.30622009569378;418;18;_rtld_global;rtld.c;140
+11.11111111111111;54;6;__GI__IO_file_jumps;fileops.c;1537
+36.36363636363637;11;4;nptr;strtod_l.c;479
+7.6923076923076925;52;4;_IO_file_jumps;fileops.c;1560
+4.651162790697675;43;2;_IO_file_jumps_mmap;fileops.c;1562
+4.651162790697675;43;2;exponent;strtod_l.c;484
+0.468384074941452;427;2;_dl_skip_args;rtld.c;84
+0.16891891891891891;592;1;value;newton.c;63
+2.2222222222222223;45;1;_IO_file_jumps_maybe_mmap;fileops.c;1586
+5.263157894736842;19;1;endptr;strtod_l.c;479
+33.33333333333333;3;1;last_digit_odd;../include/rounding-mode.h;43
+
+Variables that caused Detected SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+31.400535236396077;1121;352;value;newton.c;46
+32.75488069414317;922;302;result;newton.c;57
+50.717703349282296;418;212;vector;newton.c;16
+20.46659597030753;943;193;i;newton.c;59
+19.644723092998955;957;188;value;newton.c;8
+18.08731808731809;962;174;vector;newton.c;57
+4.592720970537262;1154;53;allowed_error;newton.c;46
+3.1813361611876987;943;30;allowed_error;newton.c;61
+11.891891891891893;185;22;value;newton.c;12
+1.9748653500897666;1114;22;m;newton.c;47
+13.953488372093023;43;6;exponent;strtod_l.c;484
+0.33783783783783783;592;2;value;newton.c;63
+18.181818181818183;11;2;nptr;strtod_l.c;479
+66.66666666666666;3;2;last_digit_odd;../include/rounding-mode.h;43
+0.5063291139240507;395;2;f_input;newton.c;17
+
+Variables that caused Crash:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+11.871750433275563;1154;137;allowed_error;newton.c;46
+25.0;416;104;index;newton.c;18
+21.772151898734176;395;86;f_input;newton.c;17
+9.013785790031813;943;85;allowed_error;newton.c;61
+13.991769547325102;486;68;user_entry;../elf/dl-sysdep.c;89
+6.860706860706861;962;66;vector;newton.c;57
+7.158351409978309;922;66;result;newton.c;57
+12.679425837320574;418;53;vector;newton.c;16
+11.241217798594848;427;48;_dl_skip_args;rtld.c;84
+4.962243797195254;927;46;path;newton.c;57
+5.298013245033113;453;24;filename;newton.c;16
+3.837471783295711;443;17;__GI__dl_argv;rtld.c;83
+3.8548752834467117;441;17;_rtld_local;rtld.c;162
+3.4782608695652173;460;16;_dl_argv;rtld.c;86
+1.7711171662125342;734;13;f_output;newton.c;32
+1.0604453870625663;943;10;i;newton.c;59
+50.0;18;9;exponent;strtod_l.c;339
+1.8823529411764703;425;8;_rtld_local_ro;rtld.c;202
+1.809954751131222;442;8;_rtld_global_ro;rtld.c;168
+1.674641148325359;418;7;_rtld_global;rtld.c;140
+0.48134777376654636;831;4;result;newton.c;31
+9.30232558139535;43;4;exponent;strtod_l.c;484
+75.0;4;3;list_all_lock;genops.c;38
+0.3537735849056604;848;3;index;newton.c;33
+5.263157894736842;19;1;endptr;strtod_l.c;479
+9.090909090909092;11;1;nptr;strtod_l.c;479
+7.142857142857142;14;1;loc;strtod_l.c;480
+2.3255813953488373;43;1;_IO_file_jumps_mmap;fileops.c;1562
+2.1739130434782608;46;1;numsize;strtod_l.c;483
