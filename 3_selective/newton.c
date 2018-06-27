@@ -75,10 +75,13 @@ int main(int argc, char *argv[]) {
 
 	int i;
 	float value;
+	float dup_value, dup_allowed_error;
 	allowed_error = vector[INPUTSIZE-1];
+	dup_allowed_error = vector[INPUTSIZE-1];
 	for(i=0; i<INPUTSIZE-1; i++){
-		float value = vector[i];
-		result[i] = newton_raphson_method(value, allowed_error, value, allowed_error);
+		value = vector[i];
+		dup_value = vector[i];
+		result[i] = newton_raphson_method(value, allowed_error, dup_value, dup_allowed_error);
 	}
 
 	write_output(argv[2], result);
