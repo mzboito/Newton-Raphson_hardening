@@ -63,12 +63,15 @@ def parse_logs(folders_path, gold_path):
     for folder in folders:
         execution = []
         lines = [line.strip("\n") for line in open(folder + "/" + output_file_name,"r")]
-        assert len(gold_values) == len(lines)
+        #assert len(gold_values) == len(lines)
         values = []
         for i in range(len(gold_values)):
             std_id = "value" + str(i+1)
             expected = gold_values[i]
-            real = lines[i]
+            if len(lines) > i:
+            	real = lines[i]
+            else:
+		real = 99999999
             values.append([std_id, expected, real])
         errItem = {"values": values}
         execution.append(errItem)
