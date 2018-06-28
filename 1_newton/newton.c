@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 	}
 	float vector[INPUTSIZE], allowed_error, result[INPUTSIZE-1];
 
-	readInput(argv[1] , vector);
+	read_input(argv[1] , vector);
 
 	int i;
 	float value;
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
 		result[i] = newton_raphson_method(value, allowed_error);
 	}
 
-	writeOutput(argv[2], result);
+	write_output(argv[2], result);
 
 	return 0;
 }

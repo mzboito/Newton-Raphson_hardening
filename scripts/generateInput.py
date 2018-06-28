@@ -16,7 +16,7 @@ def main():
         p = sys.argv[3]
     with open(sys.argv[1],'w') as outputFile:
         for i in range(0,n):
-            number = random.randint(1,9000000) #* 1000000 #if int, replace this by: random.randint(1,9000000) 
+            number = random.randint(1,9000000)
             outputFile.write(str(number) + "\n")
         outputFile.write(p + "\n")
 
