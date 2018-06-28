@@ -85,7 +85,7 @@ def main():
 
     folders_path = sys.argv[1] if sys.argv[1][-1] == '/' else sys.argv[1] + '/'
     executions = parse_logs(folders_path, sys.argv[2])
-
+    print executions
     for execution in executions:
         processErrors(execution)
 
