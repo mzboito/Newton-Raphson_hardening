@@ -1,0 +1,81 @@
+bitflips:;25631
+Total SDCs:;2931
+Detected SDCs:;27
+Crashes:;567
+Simultaneous SDCs and Crashes:;0
+
+FaultModels Undetected SDCs:
+FaultModel ;#SDCs; percentage
+LSB bit-flip;2904;99.07881269191402
+
+FaultModels Detected SDCs:
+FaultModel ;#SDCs Detected; percentage
+LSB bit-flip;27;0.9211873080859775
+
+FaultModels Crashes:
+FaultModel ;#Crashes; percentage
+LSB bit-flip;567;19.34493346980553
+
+Variables that caused Undetected SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+81.76907494935854;1481;1211;value;newton.c;54
+53.41317365269461;835;446;value;newton.c;16
+49.14463452566096;643;316;vector;newton.c;24
+100.0;237;237;index;newton.c;41
+11.311589174184594;1441;163;allowed_error;newton.c;54
+71.22641509433963;212;151;f_output;newton.c;40
+8.798882681564246;1432;126;m;newton.c;58
+51.724137931034484;232;120;result;newton.c;39
+32.16374269005848;171;55;value;newton.c;20
+23.91304347826087;92;22;exponent;strtod_l.c;484
+4.947916666666666;384;19;_rtld_global;rtld.c;140
+60.0;20;12;nptr;strtod_l.c;479
+19.35483870967742;31;6;_IO_file_jumps;fileops.c;1560
+1.4925373134328357;335;5;_rtld_local;rtld.c;162
+13.88888888888889;36;5;_IO_file_jumps_maybe_mmap;fileops.c;1586
+75.0;4;3;last_digit_odd;../include/rounding-mode.h;43
+8.333333333333332;36;3;__GI__IO_file_jumps;fileops.c;1537
+3.571428571428571;28;1;_IO_file_jumps_mmap;fileops.c;1562
+100.0;1;1;wide;printf_fp.c;254
+0.18975332068311196;527;1;f_input;newton.c;25
+0.14684287812041116;681;1;index;newton.c;26
+
+Variables that caused Detected SDCs:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+0.7427413909520594;1481;11;value;newton.c;54
+0.6688963210702341;1495;10;dup_value;newton.c;54
+0.5692599620493358;527;3;f_input;newton.c;25
+0.13879250520471895;1441;2;allowed_error;newton.c;54
+0.07147962830593281;1399;1;dup_allowed_error;newton.c;54
+
+Variables that caused Crash:
+PVF ;#flips ;#SDCs ;Var name ;file ;line number
+12.977099236641221;1441;187;allowed_error;newton.c;54
+12.922173274596183;681;88;index;newton.c;26
+14.800759013282732;527;78;f_input;newton.c;25
+14.030612244897958;392;55;_dl_skip_args;rtld.c;84
+11.827956989247312;372;44;user_entry;../elf/dl-sysdep.c;89
+4.354587869362364;643;28;vector;newton.c;24
+43.24324324324324;37;16;exponent;strtod_l.c;339
+3.1630170316301705;411;13;_dl_argv;rtld.c;86
+13.043478260869565;92;12;exponent;strtod_l.c;484
+2.989130434782609;368;11;__GI__dl_argv;rtld.c;83
+2.34375;384;9;_rtld_global;rtld.c;140
+1.2755102040816326;392;5;_rtld_global_ro;rtld.c;168
+5.263157894736842;76;4;numsize;strtod_l.c;483
+40.0;5;2;list_all_lock;genops.c;38
+0.2688172043010753;372;1;load_time;rtld.c;216
+0.11976047904191617;835;1;value;newton.c;16
+0.2985074626865672;335;1;_rtld_local;rtld.c;162
+50.0;2;1;catchp;dl-error.c;180
+0.7352941176470588;136;1;rtld_total_time;rtld.c;326
+2.7777777777777777;36;1;__GI__IO_file_jumps;fileops.c;1537
+0.06688963210702341;1495;1;dup_value;newton.c;54
+0.2915451895043732;343;1;any_debug;rtld.c;2239
+0.8130081300813009;123;1;__PRETTY_FUNCTION__;rtld.c;0
+2.7777777777777777;36;1;_IO_file_jumps_maybe_mmap;fileops.c;1586
+0.2631578947368421;380;1;library_path;rtld.c;743
+2.0408163265306123;49;1;endptr;strtod_l.c;479
+33.33333333333333;3;1;grouping;strtod_l.c;530
+0.24937655860349126;401;1;__GI___libc_enable_secure;../elf/dl-sysdep.c;56
+50.0;2;1;objname;dl-error.c;161
