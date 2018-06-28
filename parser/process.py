@@ -56,7 +56,7 @@ def parse_logs(folders_path, gold_path):
     #super_folders = glob.glob(folders_path + "*") #get all folders, each one has a file called output_500k.txt
     folders = []
     for super_folder in glob.glob(folders_path + "*/"):
-        folders += glob.glob(folders_path + super_folder + "/*" )
+        folders += glob.glob(super_folder + "/*" )
     output_file_name = "output_500k.txt"
     gold_values = [line.strip("\n") for line in open(gold_path, "r")]
     executions = []
