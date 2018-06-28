@@ -59,7 +59,7 @@ def parse_logs(folders_path, gold_path):
     executions = []
     for folder in folders:
         execution = []
-        lines = [line.strip("\n") for line in open(folder + output_file_name,"r")]
+        lines = [line.strip("\n") for line in open(folder + "/" + output_file_name,"r")]
         assert len(gold_values) == len(lines)
         values = []
         for i in range(len(gold_values)):
