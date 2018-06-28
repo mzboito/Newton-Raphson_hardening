@@ -53,7 +53,7 @@ def processErrors(errList):
 
 
 def parse_logs(folders_path, gold_path):
-    folders = glob.glob(folders_path + "*") #get all folders, each one has a file called output_500k.txt
+    folders = glob.glob(folders_path + "*/") #get all folders, each one has a file called output_500k.txt
     output_file_name = "output_500k.txt"
     gold_values = [line.strip("\n") for line in open(gold_path, "r")]
     executions = []
